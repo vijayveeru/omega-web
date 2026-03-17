@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OMEGA | Download</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="grid-bg"></div>
+    <header>
+        <div class="logo">OMEGA</div>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    </header>
+    
+    <nav id="menu">
+        <div class="close-x" onclick="toggleMenu()">✕</div>
+        <a href="index.html">HOME</a>
+        <a href="download.html" onclick="toggleMenu()">DOWNLOAD</a>
+        <a href="status.html">STATUS</a>
+        <a href="changelog.html">CHANGELOG</a>
+    </nav>
+
+    <main>
+        <section>
+            <h1>DOWNLOAD</h1>
+            <p style="color:#888; margin-bottom:40px; font-size:0.8rem; letter-spacing:2px;">SELECT ARCHITECTURE</p>
+            <div class="tile-stack" style="gap:20px;">
+                <a href="files/Omega_32bit_V2_4_1.apk" download class="cyber-btn">32 BIT APK</a>
+                <a href="files/Omega_64bit_V2_4_1.apk" class="cyber-btn" style="border-color:var(--neon-blue);">64 BIT APK</a>
+            </div>
+            <p style="margin-top: 30px; font-size: 0.7rem; opacity: 0.5;">SCROLL DOWN FOR INSTALLATION GUIDE</p>
+        </section>
+
+        <section id="install-guide">
+            <h2 style="font-family:'Orbitron'; margin-bottom:30px; font-size:1.2rem;">INSTALLATION GUIDE</h2>
+            <div class="tile-stack">
+                <div class="tile">
+                    <h3>STEP 1: DOWNLOAD</h3>
+                    <p>Tap the version matching your device architecture above.</p>
+                </div>
+                <div class="tile">
+                    <h3>STEP 2: PERMISSIONS</h3>
+                    <p>Enable "Install from Unknown Sources" in your Android Settings.</p>
+                </div>
+                <div class="tile" style="border-left-color:var(--neon-purple);">
+                    <h3>STEP 3: INITIALIZE</h3>
+                    <p>Open the APK and follow the on-screen prompts to start OMEGA.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <div id="bottom-arrow" class="scroll-indicator">▼</div>
+    <footer>© GHOST OMEGA // 2018-2026</footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OMEGA | System Status</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="grid-bg"></div>
+    <header>
+        <div class="logo">OMEGA</div>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    </header>
+    
+    <nav id="menu">
+        <div class="close-x" onclick="toggleMenu()">✕</div>
+        <a href="index.html">HOME</a>
+        <a href="download.html">DOWNLOAD</a>
+        <a href="status.html" onclick="toggleMenu()">STATUS</a>
+        <a href="changelog.html">CHANGELOG</a>
+    </nav>
+
+    <main>
+        <section>
+            <h1 style="font-size: 2.2rem;">SYSTEM STATUS</h1>
+            <div class="status-pill"><span id="server-status" style="font-weight:bold; color:var(--neon-green);">SERVER ONLINE</span></div>
+            
+            <button class="refresh-btn" onclick="fetchStatusData()">
+                <span id="refresh-icon" style="display:inline-block; margin-right:5px;">↻</span> RE-SCAN SYSTEM
+            </button>
+
+            <div class="tile-stack" style="margin-top: 30px;">
+                <div class="tile">
+                    <h3 style="font-size: 0.9rem;">SUPPORTED TARGETS</h3>
+                    <div class="metric-row"><span>PUBG GLOBAL</span> <span class="metric-val" id="pubg-v">--</span></div>
+                    <div class="metric-row"><span>BGMI INDIA</span> <span class="metric-val" id="bgmi-v">--</span></div>
+                </div>
+
+                <div class="tile" style="border-left-color: var(--neon-purple);">
+                    <h3 style="font-size: 0.9rem; color: var(--neon-purple);">NETWORK METRICS</h3>
+                    <div class="metric-row"><span>LATENCY</span> <span class="metric-val" id="lat-val">--</span></div>
+                    <div class="metric-row"><span>SECURITY</span> <span class="metric-val" style="color: var(--neon-green);" id="sec-val">--</span></div>
+                    <div class="metric-row"><span>ACTIVE NODES</span> <span class="metric-val" id="node-val">--</span></div>
+                </div>
+
+                <div class="tile" style="border-left-color:gray; background: rgba(255,255,255,0.02);">
+                    <p style="font-size:0.65rem; opacity: 0.5;">LAST HANDSHAKE: <span id="update-time">--</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="bottom-arrow" class="scroll-indicator">▼</div>
+    <footer>© GHOST OMEGA // 2018-2026</footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
